@@ -3,12 +3,8 @@
     --secondary: #536162;
     --tertiary: #424642;
     --contrast: #C06014;
-
     --dark: black;
-    
-
 }
-
 h1{
     color:var(--tertiary);
 }
@@ -19,76 +15,43 @@ h3{
 img{
     display:block;
 }
-
-
 body {
     background-color: var(--primary);
-
     font-size: 16px;
     margin:0px;
     display: flex;
     flex-direction: column;
-    /*min-height: 100vh;*/
-    /*justify-content: flex-start;*/
 }
 
 
+/*header*/
 
+header{
+    background-color:var(--secondary);
+    margin:0px;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row; 
+    align-items:flex-end;
+}
+header div h1{
+    padding:10px;
+    background-color:var(--primary);
+    font-size:30px;    
+}
 #name{
     font-size:30px;
 }
-header{
-    
-    
-    
-    background-color:var(--secondary);
-    
-    margin:0px 0px 0px 0px;
-    
-    /*padding-top:20px;
-    padding-bottom:20px;
-    padding-bottom:20px;
-    */
 
-    display:flex;
-    flex-wrap:wrap;
-   
-}
-
-
-header {
-    
-    display:flex; 
-    flex-direction:row; 
-    align-items:flex-end;
-
-    background-color:var(--secondary);
-}
-
-
-
-header div h1{
-    
-    padding:10px;
-    background-color:var(--primary);
-}
-header nav{
+/*navbar*/
+nav{
     padding:15px;
-    
-
     flex-grow:1; 
     display:flex; 
-    justify-content:flex-end; 
-
-}
-nav{
-    /*margin:15px;*/
+    justify-content:flex-end;
     display:flex;
-    
     flex-wrap:wrap;
     background-color:var(--secondary);
-
-    
 }
 nav a{
     font-size: 25px;
@@ -97,22 +60,16 @@ nav a{
     border-bottom: 2px solid var(--contrast);
     padding:5px;
     margin:10px;
-    
 }
 nav a:hover{
-    
     font-weight:bold;
-    /*font-size:22px;
-    border-bottom: 4px solid black;*/
 }
 
-
+/*horizontal strip below name and navbar*/
 #subtitle{
     width:100%; 
     height: 150px; 
-
     background-color: var(--contrast);
-
     position:relative;
 }
 #subtitle img{
@@ -125,34 +82,28 @@ nav a:hover{
     position:absolute;
     bottom:10%;
     right:5%;
-
     padding:10px;
     font-size:1.5vw;
 }
 
 
-
+/*main*/
 main{
     display:flex;
     flex-direction:column;
 }
 main section{
     display:flex;
-    padding:10px;
-    
-    
+    padding:10px; 
 }
 main section div{
     display:inline-block;
 }
 main section .sectionTitle{
     margin:10px;
-
     width:25%;
-
     position:relative;
     border-right: 4px solid black;
-    
 }
 main section .sectionTitle h1{
     font-size: 3.5vw;
@@ -160,29 +111,22 @@ main section .sectionTitle h1{
     margin-top:0px;
 }
 main section .sectionContent{
-    /*margin-top:0px;*/
-    /*border: 1px solid var(--dark);*/
-    /*flex-grow:1;*/
     width:80%;
-
     display:flex;
-
     flex-wrap:wrap;
     margin-left:15px;
     margin-right:15px;
 
 }
-/*
-main section .sectionContent 
-*/
+
+
+/*About me section*/
 .block{
     border: 4px solid var(--tertiary);
     background-color:var(--primary);
     margin:10px;
-
     display:inline-block;
 }
-
 #imgProfile{
     width: 33.5vw;
 }
@@ -192,7 +136,19 @@ main section .sectionContent
     padding:5px; 
     line-height:1.5;
 }
+#Bio>h2{
+    position:realtive; 
+    margin-left:auto; 
+    margin-right:auto;
+    text-align:center;
+}
 
+/*work section*/
+#Work .sectionContent>div{
+    display:flex; 
+    flex-direction:column; 
+    flex-basis:100%;
+}
 .workItem{
     border: 4px solid var(--tertiary);
     background-color:var(--primary);
@@ -211,94 +167,79 @@ main section .sectionContent
 }
 
 .workItem img{
-    
     width:100%;
     opacity:.2;
 }
+.workRow{
+    display:flex;
+    flex-direction:row; 
+}
+.workItem .halfSize{
+    width:50%;
+}
+.halfSize>img{
+    height:150px;
+}
 
-
-
+/*overlay*/
 .overlay{
     display:flex;
     flex-direction:column;
     
-
     position:absolute; 
     background-color: var(--tertiary);
     color:var(--contrast);
     bottom:5%;
     padding:5px;
     width:10vw;
-}
-.overlay{
-    font-size: 1.5vw;
+    font-size:1.5vw;
 }
 
 
+/*for Contact box*/
 #Contact .sectionContent{
-
     margin:10px;
+
     display:flex;
-    
     flex-wrap:wrap;
     justify-content:space-around;
     flex-direction:row;
     align-items:center;
 
     background-color: var(--secondary);  
-     
 }
-/*
-#Contact>div>ul>li{
-    
-
-    
-}
-*/
 
 #Contact>div>a{
     font-size: 25px;
     color: var(--primary);
     text-decoration:none;
     border-bottom: 2px solid var(--contrast);
+
     padding:5px;
     margin:10px;
     height:25%;
 }
-
 #Contact>div>a:hover{
-    
     font-weight:bold;
-    /*font-size:22px;
-    border-bottom: 4px solid black;*/
 }
 
+
+/*for a small screen */
 @media screen and (max-width:600px){
     header{
-        
         display:flex;
-        
         flex-direction:column;
         align-items:center;
-        
     }
     header div{
-        /*width:100%;*/
-        
         font-size:10px;
     }
-   
     nav{
-        /*width:100%;*/
-        width:85vw;
-        
         flex-direction:column;
         align-items:center;
         justify-content:center;
-        
+        width:85vw;
     }
-    
-    
     main section .sectionContent div{
         float:left;
         flex-direction:column;
