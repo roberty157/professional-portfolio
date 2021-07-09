@@ -6,8 +6,8 @@ Recipidia.addEventListener("click",()=>{
     window.open("https://roberty157.github.io/Recipidia/", '_blank');
 });
 Scheduler.addEventListener("click",()=>{
-    window.open("https://roberty157.github.io/work-day-scheduler/", '_blank');
+    window.open("https://project2nrk.herokuapp.com/", '_blank');
 });
 Dashboard.addEventListener("click",()=>{
-    window.open("https://roberty157.github.io/weather-dashboard/", '_blank');
+    window.open("https://sheltered-badlands-81371.herokuapp.com/", '_blank');
 });
